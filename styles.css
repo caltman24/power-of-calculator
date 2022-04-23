@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--accent-color);
 }
 
 body {
@@ -31,7 +32,7 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   text-align: center;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 .output {
@@ -101,4 +102,10 @@ body {
 .input-buttons > button:active {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   opacity: 85%;
+}
+
+.history {
+  width: fit-content;
+  margin: 0 auto;
+  font-size: clamp(1rem, 1rem + 2vw, 3rem);
 }

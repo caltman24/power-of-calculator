@@ -2,6 +2,8 @@ const outputElement = document.querySelector(".output");
 const baseElement = document.querySelector("input[name='base']");
 const exponetElement = document.querySelector("input[name='exponet']");
 const calculateElement = document.querySelector(".input-buttons > button");
+const historyBase = document.querySelector(".history > span")
+const historyExponent = document.querySelector(".history > sup")
 
 const power = (base, exponent) => {
   if (exponent == 0) {
@@ -26,6 +28,8 @@ const calculate = (baseValue, exponetValue) => {
   } else {
     outputElement.innerText = calculation.toLocaleString("en");
   }
+  historyBase.innerText = baseValue;
+  historyExponent.innerText = exponetValue;
 };
 
 calculateElement.addEventListener("click", () => {
