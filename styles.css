@@ -1,0 +1,99 @@
+:root {
+  --accent-color: #265845;
+  --accent-color-50: #26584599;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Created with https://www.css-gradient.com */
+  background: #fff16f;
+  background: -webkit-linear-gradient(bottom left, #fff16f97, #cf1c619c);
+  background: -moz-linear-gradient(bottom left, #fff16f97, #cf1c619c);
+  background: linear-gradient(to top right, #fff16f97, #cf1c619c);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 15vh;
+  width: fit-content;
+  max-width: 85%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: center;
+  gap: 5rem;
+}
+
+.output {
+  color: var(--accent-color);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.274);
+  font-size: calc(1rem + 5vw);
+  border-radius: 10px;
+  background-color: #26584515;
+  padding: 1rem;
+  overflow-wrap: break-word;
+}
+
+.input-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.input-buttons > * {
+  background: rgba(0, 0, 0, 0.098);
+  border: none;
+  font-weight: 700;
+}
+
+.input-buttons > input {
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  font-size: clamp(1rem, 1rem + 2vw, 3rem);
+  caret-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.input-buttons > input:hover {
+  background: rgba(0, 0, 0, 0.155);
+}
+
+.input-buttons > input::placeholder {
+  color: var(--accent-color-50);
+}
+.input-buttons > input:focus::placeholder {
+  color: transparent;
+}
+
+.input-buttons > input:focus {
+  outline: none;
+  border: none;
+}
+
+.input-buttons > button {
+  padding: 2rem;
+  background: var(--accent-color);
+  color: white;
+  font-size: clamp(1rem, 1rem + 2vw, 3rem);
+  border-radius: 50px;
+}
+
+.input-buttons > button:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  opacity: 90%;
+}
