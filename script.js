@@ -2,8 +2,8 @@ const outputElement = document.querySelector(".output");
 const baseElement = document.querySelector("input[name='base']");
 const exponetElement = document.querySelector("input[name='exponet']");
 const calculateElement = document.querySelector(".input-buttons > button");
-const historyBase = document.querySelector(".history > span")
-const historyExponent = document.querySelector(".history > sup")
+const historyBase = document.querySelector(".history > span");
+const historyExponent = document.querySelector(".history > sup");
 
 const power = (base, exponent) => {
   if (exponent == 0) {
@@ -38,7 +38,7 @@ calculateElement.addEventListener("click", () => {
 
 document.addEventListener("keyup", (e) => {
   e.preventDefault();
-  if (e.keyCode === 13) {
+  if (e.key === 'Enter') {
     calculate(baseElement.value, exponetElement.value);
   }
 });
