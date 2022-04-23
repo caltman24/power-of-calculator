@@ -11,22 +11,30 @@ const power = (base, exponent) => {
   }
 };
 
-calculateElement.addEventListener("click", () => {
-  const baseValue = baseElement.value;
-  const exponetValue = exponetElement.value;
+const calculate = (baseValue, exponetValue) => {
   if (exponetValue === "" || baseValue === "") {
-    outputElement.innerText = 1;
     return;
   } else if (isNaN(exponetValue) || isNaN(baseValue)) {
     alert("Inputs expect a number");
     return;
   }
 
-  let calculation = parseFloat(power(baseValue, exponetValue));
+  let calculation = power(baseValue, exponetValue);
   if (calculation > 999999999) {
     console.log(true);
     outputElement.innerText = calculation.toExponential(5);
   } else {
     outputElement.innerText = calculation.toLocaleString("en");
+  }
+};
+
+calculateElement.addEventListener("click", () => {
+  calculate(baseElement.value, exponetElement.value);
+});
+
+document.addEventListener("keyup", (e) => {
+  e.preventDefault();
+  if (e.keyCode === 13) {
+    calculate(baseElement.value, exponetElement.value);
   }
 });
